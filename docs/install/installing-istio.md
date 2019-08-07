@@ -74,15 +74,15 @@ without automatic sidecar injection.
 1. Create `istio-system` namespace
 
    ```shell
-   cat <<EOF | kubectl apply -f -
-   apiVersion: v1
-   kind: Namespace
-   metadata:
-     name: istio-system
-     labels:
-       istio-injection: disabled
-   EOF
-   ```
+cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: istio-system
+  labels:
+    istio-injection: disabled
+EOF
+  ```
 
 1. Finish the install by applying your desired Istio configuration:
    - [Installing Istio without sidecar injection](#installing-istio-without-sidecar-injection)(Recommended
